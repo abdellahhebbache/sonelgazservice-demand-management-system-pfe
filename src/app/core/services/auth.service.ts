@@ -26,7 +26,7 @@ interface LoginApiPayload {
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
-  private baseUrl = 'http://localhost:8082';
+  private baseUrl = 'https://sonelgazservice-demand-management-system-pfe-production.up.railway.app';
 
   constructor(private http: HttpClient, private router: Router) { }
 
