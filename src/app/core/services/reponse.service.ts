@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({ providedIn: 'root' })
 export class RequeteService {
 
-  private baseUrl = 'http://localhost:8082/Api/requetes';
+  private baseUrl = 'https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/requetes';
 
   constructor(private http: HttpClient) {}
 
