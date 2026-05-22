@@ -14,7 +14,7 @@ export interface AppNotification {
 @Injectable({ providedIn: 'root' })
 export class NotificationService {
 
-  private baseUrl = 'http://localhost:8082/Api/notifications';
+  private baseUrl = 'https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/notifications';
 
   constructor(private http: HttpClient) {}
 
