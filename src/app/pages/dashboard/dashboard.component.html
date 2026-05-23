@@ -446,7 +446,7 @@
   <p><strong>Description :</strong> {{ selectedProposition.description }}</p>
   <div *ngIf="selectedProposition.pieceJointe; else pasFichierP">
     <strong>📎 Pièce jointe :</strong>
-    <a [href]="'http://localhost:8082/Api/fichiers/view/' + selectedProposition.pieceJointe" target="_blank" class="btn-table btn-info">👁️ Voir</a>
+    <a [href]="'https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/fichiers/view/' + selectedProposition.pieceJointe" target="_blank" class="btn-table btn-info">👁️ Voir</a>
 <button class="btn-table btn-warn" (click)="telechargerFichier(selectedProposition.pieceJointe)">⬇️ Télécharger</button>
   </div>
   <ng-template #pasFichierP><p>📎 Aucune pièce jointe</p></ng-template>
@@ -542,7 +542,7 @@
   <p><strong>Description :</strong> {{ selectedRequete.description }}</p>
   <div *ngIf="selectedRequete.pieceJointe; else pasFichierR">
     <strong>📎 Pièce jointe :</strong>
-    <a [href]="'http://localhost:8082/Api/fichiers/view/' + selectedRequete.pieceJointe" target="_blank" class="btn-table btn-info">👁️ Voir</a>
+    <a [href]="'https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/fichiers/view/' + selectedRequete.pieceJointe" target="_blank" class="btn-table btn-info">👁️ Voir</a>
 <button class="btn-table btn-warn" (click)="telechargerFichier(selectedRequete.pieceJointe)">⬇️ Télécharger</button>
   </div>
   <ng-template #pasFichierR><p>📎 Aucune pièce jointe</p></ng-template>
@@ -643,7 +643,7 @@
   <p><strong>Description :</strong> {{ selectedReclamation.description }}</p>
   <div *ngIf="selectedReclamation.pieceJointe; else pasFichierRec">
     <strong>📎 Pièce jointe :</strong>
-    <a [href]="'http://localhost:8082/Api/fichiers/view/' + selectedReclamation.pieceJointe" target="_blank" class="btn-table btn-info">👁️ Voir</a>
+    <a [href]="'https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/fichiers/view/' + selectedReclamation.pieceJointe" target="_blank" class="btn-table btn-info">👁️ Voir</a>
 <button class="btn-table btn-warn" (click)="telechargerFichier(selectedReclamation.pieceJointe)">⬇️ Télécharger</button>
   </div>
   <ng-template #pasFichierRec><p>📎 Aucune pièce jointe</p></ng-template>
