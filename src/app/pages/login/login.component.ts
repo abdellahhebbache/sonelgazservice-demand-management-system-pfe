@@ -163,7 +163,7 @@ soumettreGoogleForm() {
     dateEmbauche: this.googleForm.dateEmbauche
   };
 
-  this.http.post<any>('http://localhost:8082/auth/google/complete', body).subscribe({
+  this.http.post<any>('https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/auth/google/complete', body).subscribe({
     next: (response) => {
       this.googleFormLoading = false;
       this.showGoogleModal = false;
