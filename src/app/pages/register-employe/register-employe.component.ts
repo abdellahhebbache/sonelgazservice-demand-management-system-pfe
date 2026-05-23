@@ -62,7 +62,7 @@ export class RegisterEmployeComponent implements OnInit {
 
   loadDepartements() {
     // sans token car c'est public
-    this.http.get<any[]>('http://localhost:8082/Api/departements').subscribe({
+    this.http.get<any[]>('https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/departements').subscribe({
       next: (data) => {
         this.departements = data;
         console.log('Départements chargés:', data);
@@ -122,7 +122,7 @@ export class RegisterEmployeComponent implements OnInit {
 
     console.log('Données envoyées:', this.employe);
 
-    this.http.post('http://localhost:8082/auth/register/employe', this.employe,
+    this.http.post('https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/auth/register/employe', this.employe,
       { responseType: 'text' }
     ).subscribe({
       next: (_response) => {
