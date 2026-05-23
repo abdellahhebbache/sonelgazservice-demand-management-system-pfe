@@ -116,7 +116,7 @@ private pollingInterval: any;
 private dernierStatuts: Record<string, string> = {};
 private idMaxDemande = 0;
 
-  private baseUrl = 'http://localhost:8082';
+  private baseUrl = 'https://sonelgazservice-demand-management-system-pfe-production.up.railway.app';
 
   constructor(
     private http: HttpClient,
@@ -892,7 +892,7 @@ verifierChangementsStatut() {
           const statutActuel = d.statut;
           if (this.dernierStatuts[key] && this.dernierStatuts[key] !== statutActuel) {
             // Créer la notif côté backend
-            this.http.post('http://localhost:8082/Api/notifications', {
+            this.http.post('https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/notifications', {
               emailDestinataire: this.emailUtilisateur,
               message: `Votre demande #${key} est passée au statut : ${statutActuel}`,
               type: 'STATUT_CHANGE'
