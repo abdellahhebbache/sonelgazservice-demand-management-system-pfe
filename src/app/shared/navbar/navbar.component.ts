@@ -61,12 +61,12 @@ export class NavbarComponent implements OnInit {
 
   loadProfil() {
     if (this.role === 'CLIENT') {
-      this.http.get<any>('http://localhost:8082/Api/clients/me').subscribe({
+      this.http.get<any>('https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/clients/me').subscribe({
         next: (data) => { this.employe = data; },
         error: () => { console.log('Erreur chargement profil client'); }
       });
     } else {
-      this.http.get<any>('http://localhost:8082/Api/employes/me').subscribe({
+      this.http.get<any>('https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/employes/me').subscribe({
         next: (data) => { this.employe = data; },
         error: () => { console.log('Erreur chargement profil employé'); }
       });
