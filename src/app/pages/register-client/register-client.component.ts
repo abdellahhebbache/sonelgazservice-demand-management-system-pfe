@@ -100,7 +100,7 @@ isPhoneValid(): boolean {
   this.errorMessage = '';
   this.successMessage = '';
 
-  this.http.post('http://localhost:8082/auth/register/client', this.client,
+  this.http.post('https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/auth/register/client', this.client,
     { responseType: 'text' }
   ).subscribe({
     next: (_response) => {
