@@ -39,7 +39,7 @@ public class JwtFilter extends OncePerRequestFilter {
 
         String header = request.getHeader("Authorization");
         String token = null;
-        String email = null;
+        String email = null; 
 
         try {
             if (header != null && header.startsWith("Bearer ")) {
