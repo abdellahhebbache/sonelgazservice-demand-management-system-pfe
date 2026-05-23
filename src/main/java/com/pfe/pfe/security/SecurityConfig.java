@@ -45,7 +45,8 @@ public class SecurityConfig {
                         })
                 )
                 .authorizeHttpRequests(auth -> auth
-        .requestMatchers(
+    .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
+    .requestMatchers(
         "/auth/login",
         "/auth/register/client",
         "/auth/register/employe",
@@ -57,8 +58,8 @@ public class SecurityConfig {
         "/Api/metier/**",
         "/Api/fichiers/download/**",
         "/Api/fichiers/view/**"
-).permitAll()
-        .anyRequest().authenticated()
+    ).permitAll()
+    .anyRequest().authenticated()
 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
