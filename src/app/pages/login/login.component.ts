@@ -33,7 +33,7 @@ googleFormLoading = false;
 departements: any[] = [];
   showChoixModal = false;
 
-  private baseUrl = 'http://localhost:8082';
+  private baseUrl = 'https://sonelgazservice-demand-management-system-pfe-production.up.railway.app';
 
   constructor(
     private authService: AuthService,
@@ -134,7 +134,7 @@ departements: any[] = [];
   choisirTypeGoogle(type: string) {
   this.googleTypeChoisi = type;
   if (type === 'EMPLOYE') {
-    this.http.get<any[]>('http://localhost:8082/Api/departements').subscribe({
+    this.http.get<any[]>('https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/departements').subscribe({
       next: (d) => this.departements = d,
       error: () => {}
     });
