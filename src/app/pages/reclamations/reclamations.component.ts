@@ -32,14 +32,14 @@ export class ReclamationsComponent implements OnInit {
   constructor(private reclamationService: ReclamationService, private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>('http://localhost:8080/Api/metier').subscribe(data => {
+    this.http.get<any[]>('https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/metier').subscribe(data => {
       this.metiers = data;
     });
   }
 
   onMetierChange(): void {
     if (this.selectedIdMetier) {
-      this.http.get<any[]>(`http://localhost:8080/Api/departements/par-metier/${this.selectedIdMetier}`)
+      this.http.get<any[]>(https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/departements/par-metier/${this.selectedIdMetier}`)
         .subscribe(data => {
           this.departements = data;
           this.reclamation.departement = null;
