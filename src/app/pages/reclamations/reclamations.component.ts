@@ -39,7 +39,7 @@ export class ReclamationsComponent implements OnInit {
 
   onMetierChange(): void {
     if (this.selectedIdMetier) {
-      this.http.get<any[]>(https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/departements/par-metier/${this.selectedIdMetier}`)
+      this.http.get<any[]>('https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/departements/par-metier/${this.selectedIdMetier}`)
         .subscribe(data => {
           this.departements = data;
           this.reclamation.departement = null;
