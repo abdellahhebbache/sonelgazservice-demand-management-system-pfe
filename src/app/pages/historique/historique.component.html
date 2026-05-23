@@ -141,7 +141,7 @@
   <!-- Fichier existant -->
   <ng-container *ngIf="selectedDemande.pieceJointe; else pasDePJ">
     <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-     <a [href]="'http://localhost:8082/Api/fichiers/view/' + selectedDemande.pieceJointe"
+     <a [href]="'https://sonelgazservice-demand-management-system-pfe-production.up.railway.app/Api/fichiers/view/' + selectedDemande.pieceJointe"
    target="_blank"
    style="color:#1565c0; text-decoration:none; font-weight:500; font-size:14px;">
   📎 {{ selectedDemande.pieceJointe }}
